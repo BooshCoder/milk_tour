@@ -11,5 +11,10 @@
   "devDependencies": {
     "vite": "^7.0.0",
     "vite-plugin-handlebars": "^2.0.0"
+  },
+  "overrides": {
+    "rollup": {
+      "fsevents": "~2.3.3"
+    }
   }
 }
