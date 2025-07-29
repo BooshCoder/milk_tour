@@ -1,0 +1,14 @@
+/* Головний CSS файл - імпорт всіх стилів */
+/* Всі стилі використовують Mobile First підхід */
+
+/* Базові стилі */
+@import './reset.css';
+@import './base.css';
+
+/* Компоненти */
+@import './header.css';
+@import './hero.css';
+@import './about.css';
+@import './geo.css';
+@import './promo.css';
+@import './features.css';

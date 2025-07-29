@@ -1,0 +1,185 @@
+.section.about {
+  padding: 40px 0;
+  background: #fff;
+  position: relative;
+}
+
+.section.about .container {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.right-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-section {
+  margin-bottom: 0;
+}
+
+.text-section h2 {
+  font-size: 36px;
+  color: #0072ce;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-align: left;
+  line-height: 1.2;
+}
+
+.text-section h3 {
+  font-size: 18px;
+  color: #64748b;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.text-section p {
+  font-size: 16px;
+  color: #475569;
+  margin-bottom: 16px;
+  line-height: 1.6;
+  text-align: left;
+  font-weight: 400;
+}
+
+.image-section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.image-section img {
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.image-section img:hover {
+  transform: translateY(-4px);
+}
+
+.details-section {
+  background: #0072ce;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #0056a3;
+}
+
+.details-section p {
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 8px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.details-section strong {
+  color: #facc15;
+  font-weight: 600;
+}
+
+/* Мобільний дизайн (до 767px) */
+@media (max-width: 767px) {
+  .section.about .container {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+    gap: 24px;
+  }
+
+  .text-section h2 {
+    font-size: 28px;
+  }
+
+  .text-section h3 {
+    font-size: 16px;
+  }
+
+  .text-section p {
+    font-size: 15px;
+  }
+
+  .image-section {
+    display: none;
+  }
+
+  .details-section {
+    padding: 20px;
+  }
+}
+
+/* Планшет дизайн (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .section.about .container {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 24px;
+    gap: 32px;
+  }
+
+  .text-section h2 {
+    font-size: 32px;
+  }
+
+  .text-section h3 {
+    font-size: 17px;
+  }
+
+  .text-section p {
+    font-size: 15px;
+  }
+
+  .image-section img {
+    max-width: 90%;
+  }
+
+  .details-section {
+    padding: 20px;
+  }
+}
+
+/* Десктоп дизайн (1024px+) */
+@media (min-width: 1024px) {
+  .section.about .container {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 40px;
+    gap: 40px;
+  }
+
+  .text-section h2 {
+    font-size: 36px;
+  }
+
+  .text-section h3 {
+    font-size: 18px;
+  }
+
+  .text-section p {
+    font-size: 16px;
+  }
+
+  .image-section img {
+    max-width: 82%;
+  }
+
+  .details-section {
+    padding: 24px;
+  }
+}

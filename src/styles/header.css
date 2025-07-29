@@ -1,0 +1,97 @@
+/* *--------------------------------- header -------------------------------- */
+/* Mobile First підхід */
+
+.header {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 1px 0 #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Main panel */
+.header__main {
+  padding: 15px 0; /* Менший padding для мобільних */
+}
+
+.header__main .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column; /* Вертикальне розташування для мобільних */
+  gap: 15px;
+}
+
+.header__logo {
+  order: 1; /* Лого першим */
+}
+
+.header__nav {
+  order: 2; /* Навігація другою */
+}
+
+.header__nav ul {
+  display: flex;
+  flex-direction: column; /* Вертикальне меню для мобільних */
+  gap: 10px;
+  text-align: center;
+}
+
+.header__nav ul li {
+  margin-left: 0; /* Прибираємо margin для мобільних */
+}
+
+.nav-item {
+  font-size: 12px; /* Менший шрифт для мобільних */
+  color: #0072ce;
+  font-weight: 900;
+  padding: 6px 12px; /* Менший padding для мобільних */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  display: block; /* Блочний елемент для мобільних */
+}
+
+.nav-item:hover {
+  color: #004abf;
+}
+
+/* Tablet styles */
+@media screen and (min-width: 768px) {
+  .header__main {
+    padding: 20px 0;
+  }
+
+  .header__main .container {
+    flex-direction: row; /* Горизонтальне розташування для планшетів */
+    gap: 0;
+  }
+
+  .header__nav ul {
+    flex-direction: row; /* Горизонтальне меню для планшетів */
+    gap: 0;
+  }
+
+  .header__nav ul li {
+    margin-left: 20px; /* Повертаємо margin */
+  }
+
+  .nav-item {
+    font-size: 13px;
+    padding: 8px 15px;
+    display: inline-block;
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1200px) {
+  .header__nav ul li {
+    margin-left: 25px;
+  }
+
+  .nav-item {
+    font-size: 13px;
+    padding: 8px 15px;
+  }
+}

@@ -1,0 +1,165 @@
+/* Geo Section Styles - використовує структуру about */
+.section.geo {
+  padding: 40px 0;
+  background: #fff;
+  position: relative;
+}
+
+.section.geo .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.geo-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.geo-title {
+  font-size: 36px;
+  color: #0072ce;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-align: center;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.geo-subtitle {
+  font-size: 18px;
+  color: #64748b;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.geo-content {
+  display: flex;
+  gap: 40px;
+  margin-bottom: -60px;
+  position: relative;
+  z-index: 2;
+}
+
+.geo-text-column {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px;
+  border-radius: 12px;
+  /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); */
+}
+
+.geo-text {
+  font-size: 16px;
+  color: #475569;
+  margin-bottom: 16px;
+  line-height: 1.6;
+  text-align: left;
+  font-weight: 400;
+}
+
+.geo-text:last-child {
+  margin-bottom: 0;
+}
+
+.geo-map {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.geo-map:hover {
+  transform: translateY(-4px);
+}
+
+/* Мобільний дизайн (до 767px) */
+@media (max-width: 767px) {
+  .section.geo .container {
+    padding: 0 16px;
+  }
+
+  .geo-title {
+    font-size: 28px;
+  }
+
+  .geo-subtitle {
+    font-size: 16px;
+  }
+
+  .geo-content {
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: -40px;
+  }
+
+  .geo-text-column {
+    padding: 20px;
+  }
+
+  .geo-text {
+    font-size: 15px;
+  }
+}
+
+/* Планшет дизайн (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .section.geo .container {
+    padding: 0 24px;
+  }
+
+  .geo-title {
+    font-size: 32px;
+  }
+
+  .geo-subtitle {
+    font-size: 17px;
+  }
+
+  .geo-content {
+    gap: 32px;
+    margin-bottom: -50px;
+  }
+
+  .geo-text-column {
+    padding: 25px;
+  }
+
+  .geo-text {
+    font-size: 15px;
+  }
+}
+
+/* Десктоп дизайн (1024px+) */
+@media (min-width: 1024px) {
+  .section.geo .container {
+    padding: 0 40px;
+  }
+
+  .geo-title {
+    font-size: 36px;
+  }
+
+  .geo-subtitle {
+    font-size: 18px;
+  }
+
+  .geo-content {
+    gap: 40px;
+    margin-bottom: -60px;
+  }
+
+  .geo-text-column {
+    padding: 30px;
+  }
+
+  .geo-text {
+    font-size: 16px;
+  }
+}

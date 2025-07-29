@@ -1,0 +1,175 @@
+/* Якісний CSS Reset - Mobile First підхід */
+
+/* Базові налаштування для всіх елементів */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Скидання HTML та body */
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+  font-size: 14px; /* Базовий розмір для мобільних */
+  overflow-x: auto; /* Дозволяємо горизонтальний скрол */
+}
+
+body {
+  font-family:
+    'Manrope',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: auto; /* Дозволяємо горизонтальний скрол */
+  min-height: 100vh; /* Fallback для старих браузерів */
+  min-height: 100dvh; /* Використовуємо dynamic viewport height */
+}
+
+/* Скидання заголовків */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+/* Скидання параграфів */
+p {
+  margin: 0;
+}
+
+/* Скидання списків */
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Скидання посилань */
+a {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+}
+
+/* Скидання кнопок */
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Скидання форм */
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+/* Скидання зображень */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-style: none;
+}
+
+/* Скидання таблиць */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Скидання горизонтальної лінії */
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #ccc;
+  margin: 20px 0;
+}
+
+/* Скидання деталей */
+details {
+  display: block;
+}
+
+/* Скидання summary */
+summary {
+  display: list-item;
+}
+
+/* Скидання canvas */
+canvas {
+  display: block;
+}
+
+/* Скидання template */
+template {
+  display: none;
+}
+
+/* Скидання hidden */
+[hidden] {
+  display: none;
+}
+
+/* Скидання для скрін-рідерів */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Скидання фокусу для доступності (виключаємо кнопки навігації) */
+:focus:not(.hero-nav-button):not(.button) {
+  outline: 2px solid #0072ce;
+  outline-offset: 2px;
+}
+
+/* Tablet styles */
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
