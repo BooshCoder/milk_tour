@@ -16,16 +16,12 @@ html {
   -moz-tab-size: 4;
   tab-size: 4;
   font-size: 14px; /* Базовий розмір для мобільних */
-  overflow-x: auto; /* Дозволяємо горизонтальний скрол */
+  overflow-x: hidden; /* Запобігаємо горизонтальному скролу */
+  width: 100%;
 }
 
 body {
-  font-family:
-    'Manrope',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -34,9 +30,10 @@ body {
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: auto; /* Дозволяємо горизонтальний скрол */
   min-height: 100vh; /* Fallback для старих браузерів */
   min-height: 100dvh; /* Використовуємо dynamic viewport height */
+  width: 100%;
+  position: relative;
 }
 
 /* Скидання заголовків */
@@ -171,5 +168,29 @@ template {
 @media screen and (min-width: 1200px) {
   html {
     font-size: 16px;
+  }
+}
+
+/* iOS Safari специфічні правила - тільки для мобільних */
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 767px) {
+    html,
+    body {
+      overflow-x: hidden;
+      width: 100vw;
+      max-width: 100vw;
+    }
+
+    * {
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Виняток для херо секції */
+    .hero,
+    .hero * {
+      overflow-x: visible;
+      width: auto;
+      max-width: none;
+    }
   }
 }

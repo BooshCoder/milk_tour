@@ -10,6 +10,7 @@
   transition: background-image 0.5s ease;
   width: 100%;
   margin: 0;
+  touch-action: manipulation;
 }
 
 .hero::after {
@@ -324,6 +325,8 @@
   height: 3px;
   background-color: #fff;
   transition: left 0.3s ease, width 0.3s ease;
+  opacity: 0; /* Початково прихований */
+  visibility: hidden; /* Початково прихований */
 }
 
 /* Мобільний дизайн (до 767px) */
@@ -331,6 +334,16 @@
   .hero {
     padding-top: 180px;
     height: 57.2vh;
+    overflow-x: visible;
+    width: 100%;
+  }
+
+  .hero * {
+    overflow-x: visible;
+  }
+
+  .indicator {
+    display: none;
   }
 
   .hero__content {

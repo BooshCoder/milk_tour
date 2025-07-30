@@ -62,14 +62,25 @@ class HeroSlider {
 
     let startX = 0;
     let endX = 0;
+    let isSwiping = false;
 
     heroSection.addEventListener('touchstart', (e) => {
       startX = e.touches[0].clientX;
+      isSwiping = true;
+    });
+
+    heroSection.addEventListener('touchmove', (e) => {
+      if (isSwiping) {
+        e.preventDefault(); // Запобігаємо стандартному скролу
+      }
     });
 
     heroSection.addEventListener('touchend', (e) => {
-      endX = e.changedTouches[0].clientX;
-      this.handleSwipe(startX, endX);
+      if (isSwiping) {
+        endX = e.changedTouches[0].clientX;
+        this.handleSwipe(startX, endX);
+        isSwiping = false;
+      }
     });
   }
 
@@ -220,6 +231,14 @@ class HeroSlider {
   initializeFirstSlide() {
     this.elements.bgCurrent.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), ${this.backgroundImages[0]}`;
     this.updateNavigation(0);
+    
+    // Показуємо індикатор після ініціалізації
+    if (this.elements.indicator) {
+      setTimeout(() => {
+        this.elements.indicator.style.opacity = '1';
+        this.elements.indicator.style.visibility = 'visible';
+      }, 100);
+    }
   }
 
   startProgressBar() {
