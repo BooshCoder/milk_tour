@@ -7,6 +7,7 @@
 
 /* Компоненти */
 @import './header.css';
+@import './mobile-menu.css';
 @import './hero.css';
 @import './about.css';
 @import './geo.css';

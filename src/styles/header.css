@@ -8,6 +8,24 @@
   position: sticky;
   top: 0;
   z-index: 100;
+  position: relative;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.08) 0%,
+    rgba(0, 0, 0, 0.02) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 1;
 }
 
 /* Main panel */
@@ -19,8 +37,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: column; /* Вертикальне розташування для мобільних */
-  gap: 15px;
+  flex-direction: row; /* Горизонтальне розташування */
+  gap: 0;
 }
 
 .header__logo {
@@ -93,5 +111,16 @@
   .nav-item {
     font-size: 13px;
     padding: 8px 15px;
+  }
+}
+
+/* Hide desktop nav on mobile */
+@media screen and (max-width: 767px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
   }
 }

@@ -1,12 +1,15 @@
 <header class="header">
   <div class="header__main">
     <div class="container">
-      <div class="header__logo">
-        <svg width="180" height="58">
-          <use href="/images/icons.svg#icon-Logo_Agro"></use>
+      <!-- Mobile Menu Button -->
+      <button class="mobile-menu-toggle" aria-label="Відкрити меню">
+        <svg width="24" height="24" class="burger-icon">
+          <use href="/images/sprite.svg#icon-burger-menu"></use>
         </svg>
-      </div>
-      <nav class="header__nav">
+      </button>
+
+      <!-- Desktop Navigation -->
+      <nav class="header__nav desktop-nav">
         <ul>
           <li><a class="nav-item" href="#solutions">рішення</a></li>
           <li><a class="nav-item" href="#products">продукти</a></li>
@@ -15,6 +18,14 @@
           </li>
         </ul>
       </nav>
+
+      <div class="header__logo">
+        <svg width="180" height="58">
+          <use href="/images/icons.svg#icon-Logo_Agro"></use>
+        </svg>
+      </div>
     </div>
   </div>
+
+  {{> mobile-menu }}
 </header>

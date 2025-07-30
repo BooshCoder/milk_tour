@@ -7,10 +7,30 @@
   color: #fff;
   height: 57.2vh;
   position: relative;
-  overflow: hidden;
   transition: background-image 0.5s ease;
   width: 100%;
   margin: 0;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.25) 15%,
+    rgba(0, 0, 0, 0.15) 30%,
+    rgba(0, 0, 0, 0.08) 50%,
+    rgba(0, 0, 0, 0.04) 70%,
+    rgba(0, 0, 0, 0.01) 90%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 1;
 }
 
 .hero-background {
@@ -129,9 +149,7 @@
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
-  transition:
-    opacity 0.5s ease,
-    transform 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.5s ease;
   margin: 0;
   padding: 0;
   display: flex;
@@ -234,9 +252,7 @@
   padding: 8px 14px;
   background-color: transparent;
   cursor: pointer;
-  transition:
-    background-color 0.3s ease,
-    border-color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
   outline: none;
   /* border: 1px solid transparent; */
 }
@@ -307,9 +323,7 @@
   bottom: 0;
   height: 3px;
   background-color: #fff;
-  transition:
-    left 0.3s ease,
-    width 0.3s ease;
+  transition: left 0.3s ease, width 0.3s ease;
 }
 
 /* Мобільний дизайн (до 767px) */

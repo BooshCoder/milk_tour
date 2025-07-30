@@ -3,7 +3,7 @@ class HeroSlider {
     this.currentSlide = 0;
     this.isAnimating = false;
     this.autoPlayInterval = null;
-    this.autoPlayDelay = 5000; // 5 секунд
+    this.autoPlayDelay = 10000; // 10 секунд
 
     this.init();
   }
@@ -20,8 +20,8 @@ class HeroSlider {
 
     this.backgroundImages = [
       'url("/images/hero/image1.jpg")',
-      'url("/images/hero/image2.jpeg")',
-      'url("/images/hero/image3.jpeg")',
+      'url("/images/hero/image2.jpg")',
+      'url("/images/hero/image3.jpg")',
       'url("/images/hero/image4.jpg")'
     ];
 

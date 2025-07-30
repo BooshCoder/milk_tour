@@ -90,9 +90,7 @@
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
-  transition:
-    background-color 0.3s ease,
-    transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .promo-button:hover {
@@ -117,12 +115,16 @@
 
   .promo-text h2 {
     font-size: 28px;
-    text-align: center;
+    text-align: left;
   }
 
   .promo-text p {
     font-size: 15px;
-    text-align: center;
+    text-align: left;
+  }
+
+  .promo-image-desktop {
+    display: none;
   }
 
   .promo-image img {
