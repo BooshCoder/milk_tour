@@ -1,0 +1,192 @@
+/* Footer Styles - Mobile First підхід */
+
+footer {
+  background-color: #0072ce;
+  color: #fff;
+  padding: 40px 0 40px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Логотип */
+.footer-logo {
+  text-align: center;
+  order: 1;
+}
+
+.footer-logo svg {
+  max-width: 200px;
+  height: auto;
+  fill: #fff; /* Робить SVG логотип білим */
+}
+
+/* Навігаційне меню */
+.footer-menu {
+  order: 2;
+  text-align: center;
+}
+
+.footer-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-menu ul li {
+  margin: 0;
+}
+
+.footer-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-menu ul li a:hover {
+  color: #b3d9ff;
+}
+
+/* Контакти */
+.footer-contacts {
+  order: 3;
+  text-align: center;
+}
+
+.footer-contacts p {
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #e6f3ff;
+}
+
+.footer-contacts p:last-child {
+  margin-bottom: 0;
+}
+
+/* Tablet styles */
+@media screen and (min-width: 768px) {
+  footer {
+    padding: 50px 0 30px;
+  }
+
+  .footer-container {
+    padding: 0 30px;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-logo {
+    order: 1;
+    text-align: center;
+  }
+
+  .footer-logo svg {
+    max-width: 180px;
+  }
+
+  .footer-menu {
+    order: 2;
+    text-align: center;
+  }
+
+  .footer-menu ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-menu ul li a {
+    font-size: 16px;
+  }
+
+  .footer-contacts {
+    order: 3;
+    text-align: center;
+  }
+
+  .footer-contacts p {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1200px) {
+  footer {
+    padding: 60px 0 40px;
+  }
+
+  .footer-container {
+    padding: 0 40px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+  }
+
+  .footer-logo {
+    order: 1;
+    text-align: left;
+    flex: 1;
+  }
+
+  .footer-logo svg {
+    max-width: 220px;
+  }
+
+  .footer-menu {
+    order: 2;
+    font-size: 12px;
+    text-align: center;
+    flex: 1;
+  }
+
+  .footer-menu ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .footer-menu ul li a {
+    font-size: 14px;
+  }
+
+  .footer-contacts {
+    order: 3;
+    text-align: right;
+    flex: 1;
+  }
+
+  .footer-contacts p {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+}
+
+/* Додаткові стилі для кращої доступності */
+.footer-menu ul li a:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* Анімація для логотипу */
+.footer-logo svg {
+  transition: opacity 0.3s ease;
+}
+
+.footer-logo svg:hover {
+  opacity: 0.8;
+}

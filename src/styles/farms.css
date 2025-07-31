@@ -1,7 +1,7 @@
 /* Features section - Mobile First підхід */
 
-.features-section {
-  padding: 40px 0 80px; /* Збільшуємо padding знизу для мобільних */
+.farm-section {
+  padding: 20px 0 80px; /* Збільшуємо padding знизу для мобільних */
   background-color: rgb(230, 232, 234);
   overflow: visible; /* Дозволяємо контенту виходити за межі */
   min-height: auto; /* Автоматична висота */
@@ -10,12 +10,33 @@
   margin-bottom: 20px;
 }
 
+/* Загальний контейнер */
+.farm-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Заголовок секції */
+.farm-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.farm-header h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #0072ce;
+  margin: 0;
+  line-height: 1.2;
+}
+
 /* Стилі сітки карток */
-.features-grid {
-  display: grid;
-  grid-template-columns: 1fr; /* Одна колонка для мобільних */
-  gap: 20px; /* Менший gap для мобільних */
-  max-width: 100%;
+.farm-grid {
+  display: flex;
+  flex-direction: column; /* Вертикальне розташування */
+  gap: 20px; /* Відступ між картками */
+  width: 100%;
   margin: 0 auto;
   overflow: visible; /* Дозволяємо скрол */
   /* Додаємо додатковий простір внизу */
@@ -23,7 +44,7 @@
 }
 
 /* Стилі окремої картки */
-.feature-card {
+.farm-card {
   background-color: #ffffff;
   border: none;
   border-radius: 0;
@@ -31,19 +52,19 @@
   overflow: hidden;
   display: flex;
   flex-direction: column; /* Вертикальне розташування для мобільних */
-  height: auto; /* Автоматична висота для мобільних */
-  min-height: 0; /* Дозволяємо зменшення */
+  height: auto; /* Автоматична висота під контент */
+  min-height: 300px; /* Мінімальна висота для мобільних */
+  width: 100%; /* Повна ширина контейнера */
 }
 
-.feature-image {
+.farm-image {
   position: relative;
   width: 100%; /* Повна ширина для мобільних */
-  height: 0;
-  padding-bottom: 56.25%; /* Співвідношення сторін 16:9 */
+  height: 200px; /* Фіксована висота для мобільних */
   flex-shrink: 0; /* Запобігає зменшенню */
 }
 
-.card-image {
+.farm-card-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -52,7 +73,7 @@
   object-fit: cover;
 }
 
-.feature-content {
+.farm-content {
   width: 100%; /* Повна ширина для мобільних */
   padding: 20px; /* Менший padding для мобільних */
   display: flex;
@@ -63,7 +84,7 @@
 }
 
 /* Стилі заголовка картки */
-.card-title {
+.farm-card-title {
   font-size: 24px;
   font-weight: bold;
   color: #0072ce;
@@ -72,7 +93,7 @@
 }
 
 /* Стилі опису картки */
-.card-description {
+.farm-card-description {
   font-size: 14px;
   color: #333;
   margin-bottom: 18px;
@@ -81,7 +102,7 @@
 }
 
 /* Стилі посилання "Watch video" */
-.card-link {
+.farm-card-link {
   font-size: 16px;
   font-weight: bold;
   color: #0072ce;
@@ -92,72 +113,97 @@
   margin-top: auto; /* Притискаємо до низу */
 }
 
-.card-link .arrow {
+.farm-card-link .farm-arrow {
   margin-left: 8px;
   transition: transform 0.3s ease;
 }
 
-.card-link:hover {
+.farm-card-link:hover {
   color: #004abf;
 }
 
-.card-link:hover .arrow {
+.farm-card-link:hover .farm-arrow {
   transform: translateX(4px);
 }
 
 /* Tablet styles */
 @media screen and (min-width: 768px) {
-  .features-section {
+  .farm-section {
     padding: 50px 0 90px;
   }
 
-  .features-grid {
+  .farm-container {
+    padding: 0 24px;
+  }
+
+  .farm-header {
+    margin-bottom: 50px;
+  }
+
+  .farm-header h2 {
+    font-size: 36px;
+  }
+
+  .farm-grid {
     gap: 30px;
     padding-bottom: 50px;
   }
 
-  .feature-content {
+  .farm-content {
     padding: 25px;
   }
 
-  .card-title {
+  .farm-card-title {
     font-size: 22px;
   }
 }
 
 /* Desktop styles */
 @media screen and (min-width: 1200px) {
-  .features-section {
+  .farm-section {
     padding: 60px 0 100px;
   }
 
-  .features-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .farm-container {
+    padding: 0 40px;
+  }
+
+  .farm-header {
+    margin-bottom: 60px;
+  }
+
+  .farm-header h2 {
+    font-size: 40px;
+  }
+
+  .farm-grid {
     gap: 30px;
     padding-bottom: 60px;
   }
 
-  .feature-card {
+  .farm-card {
     flex-direction: row;
-    height: 280px;
+    height: auto; /* Автоматична висота під контент */
+    min-height: 280px; /* Мінімальна висота для desktop */
   }
 
-  .feature-image {
+  .farm-image {
     width: 50%;
-    height: 100%;
-    padding-bottom: 0;
+    height: auto; /* Фіксована висота для desktop */
+    flex-shrink: 0;
   }
 
-  .feature-content {
+  .farm-content {
     width: 50%;
     padding: 28px;
+    height: auto; /* Автоматична висота під контент */
   }
 
-  .card-title {
+  .farm-card-title {
     font-size: 22px;
   }
 
-  .card-description {
+  .farm-card-description {
     font-size: 14px;
   }
 }
