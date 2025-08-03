@@ -1,8 +1,8 @@
 /* Features section - Mobile First підхід */
 
 .farm-section {
-  padding: 20px 0 80px; /* Збільшуємо padding знизу для мобільних */
-  background-color: rgb(230, 232, 234);
+  padding: 36px 0 40px; /* Збільшуємо padding знизу для мобільних */
+  background-color: rgba(60, 146, 232, 0.084);
   overflow: visible; /* Дозволяємо контенту виходити за межі */
   min-height: auto; /* Автоматична висота */
   position: relative; /* Для правильного позиціонування */
@@ -146,7 +146,6 @@
 
   .farm-grid {
     gap: 30px;
-    padding-bottom: 50px;
   }
 
   .farm-content {
@@ -161,7 +160,7 @@
 /* Desktop styles */
 @media screen and (min-width: 1200px) {
   .farm-section {
-    padding: 60px 0 100px;
+    padding: 36px 0 40px;
   }
 
   .farm-container {
@@ -178,7 +177,7 @@
 
   .farm-grid {
     gap: 30px;
-    padding-bottom: 60px;
+    /* padding-bottom: 60px; */
   }
 
   .farm-card {

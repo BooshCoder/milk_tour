@@ -1,1 +1,319 @@
+/* Price Section Styles */
+.price-section {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #ff6b9d 0%, #ff8fab 100%);
+  position: relative;
+}
 
+.price-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.price-title {
+  font-size: 48px;
+  color: #ffffff;
+  font-weight: 800;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.price-paragraph {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 50px;
+  line-height: 1.6;
+  text-align: center;
+  font-weight: 400;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.price-strong {
+  color: #ffffff;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 12px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.price-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-top: 40px;
+}
+
+.price-included,
+.price-not-included {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-included:hover,
+.price-not-included:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.price-subtitle {
+  font-size: 24px;
+  color: #ff6b9d;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.price-subtitle-coordinator {
+  font-size: 18px;
+  color: #ff6b9d;
+  font-weight: 600;
+  margin: 40px 0 25px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.price-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.price-item {
+  font-size: 16px;
+  color: #475569;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  padding-left: 30px;
+  position: relative;
+  text-align: justify;
+  hyphens: auto;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+.price-item::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #ff6b9d;
+  font-weight: bold;
+  font-size: 16px;
+  background: rgba(255, 107, 157, 0.1);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coordinator-info {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid rgba(255, 107, 157, 0.2);
+}
+
+.coordinator-name {
+  font-size: 18px;
+  color: #ff6b9d;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.coordinator-company {
+  font-size: 14px;
+  color: #64748b;
+  font-weight: 600;
+  margin-bottom: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.coordinator-contact {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.coordinator-address {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 6px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.coordinator-site {
+  font-size: 14px;
+  color: #ff6b9d;
+  font-weight: 600;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+/* Мобільний дизайн (до 767px) */
+@media (max-width: 767px) {
+  .price-section {
+    padding: 40px 0;
+  }
+
+  .price-section .container {
+    padding: 0 16px;
+  }
+
+  .price-title {
+    font-size: 32px;
+  }
+
+  .price-paragraph {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+
+  .price-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 30px;
+  }
+
+  .price-included,
+  .price-not-included {
+    padding: 30px 20px;
+  }
+
+  .price-subtitle {
+    font-size: 20px;
+  }
+
+  .price-item {
+    font-size: 15px;
+    padding-left: 25px;
+  }
+
+  .coordinator-name {
+    font-size: 16px;
+  }
+
+  .coordinator-company {
+    font-size: 12px;
+  }
+
+  .coordinator-contact,
+  .coordinator-address,
+  .coordinator-site {
+    font-size: 13px;
+  }
+}
+
+/* Планшет дизайн (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .price-section {
+    padding: 50px 0;
+  }
+
+  .price-section .container {
+    padding: 0 24px;
+  }
+
+  .price-title {
+    font-size: 40px;
+  }
+
+  .price-paragraph {
+    font-size: 18px;
+  }
+
+  .price-content {
+    gap: 40px;
+  }
+
+  .price-included,
+  .price-not-included {
+    padding: 35px 25px;
+  }
+
+  .price-subtitle {
+    font-size: 22px;
+  }
+
+  .price-item {
+    font-size: 15px;
+  }
+
+  .coordinator-name {
+    font-size: 17px;
+  }
+
+  .coordinator-company {
+    font-size: 13px;
+  }
+
+  .coordinator-contact,
+  .coordinator-address,
+  .coordinator-site {
+    font-size: 13px;
+  }
+}
+
+/* Десктоп дизайн (1024px+) */
+@media (min-width: 1024px) {
+  .price-section {
+    padding: 60px 0;
+  }
+
+  .price-section .container {
+    padding: 0 40px;
+  }
+
+  .price-title {
+    font-size: 48px;
+  }
+
+  .price-paragraph {
+    font-size: 20px;
+  }
+
+  .price-content {
+    gap: 60px;
+  }
+
+  .price-included,
+  .price-not-included {
+    padding: 40px;
+  }
+
+  .price-subtitle {
+    font-size: 24px;
+  }
+
+  .price-item {
+    font-size: 16px;
+  }
+
+  .coordinator-name {
+    font-size: 18px;
+  }
+
+  .coordinator-company {
+    font-size: 14px;
+  }
+
+  .coordinator-contact,
+  .coordinator-address,
+  .coordinator-site {
+    font-size: 14px;
+  }
+}

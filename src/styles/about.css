@@ -1,5 +1,5 @@
 .section.about {
-  padding: 20px 0;
+  padding: 36px 0;
   background: #fff;
   position: relative;
 }
@@ -55,8 +55,11 @@
   color: #475569;
   margin-bottom: 26px;
   line-height: 1.6;
-  text-align: left;
+  text-align: justify;
   font-weight: 400;
+  hyphens: auto;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 .image-section {
@@ -98,6 +101,10 @@
   margin-bottom: 12px;
   line-height: 1.6;
   font-weight: 400;
+  text-align: justify;
+  hyphens: auto;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 .details-section strong {
@@ -128,6 +135,10 @@
 
   .text-section p {
     font-size: 15px;
+    text-align: justify;
+    hyphens: auto;
+    word-break: normal;
+    overflow-wrap: break-word;
   }
 
   .image-section {
@@ -158,6 +169,10 @@
 
   .text-section p {
     font-size: 15px;
+    text-align: justify;
+    hyphens: auto;
+    word-break: normal;
+    overflow-wrap: break-word;
   }
 
   .image-section {
@@ -195,6 +210,10 @@
 
   .text-section p {
     font-size: 16px;
+    text-align: justify;
+    hyphens: auto;
+    word-break: normal;
+    overflow-wrap: break-word;
   }
 
   .image-section {

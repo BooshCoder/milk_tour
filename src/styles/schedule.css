@@ -1,1 +1,196 @@
+/* Schedule Section Styles */
+.schedule-section {
+  padding: 60px 0;
+  background: #fff;
+  position: relative;
+}
 
+.schedule-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.schedule-title {
+  font-size: 42px;
+  color: #0072ce;
+  font-weight: 800;
+  margin-bottom: 40px;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.schedule-day {
+  margin-bottom: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.schedule-day:hover {
+  border-color: #0072ce;
+  box-shadow: 0 4px 20px rgba(0, 114, 206, 0.1);
+}
+
+.schedule-day[open] {
+  border-color: #0072ce;
+  box-shadow: 0 8px 30px rgba(0, 114, 206, 0.15);
+}
+
+.schedule-summary {
+  padding: 18px 24px;
+  background: linear-gradient(135deg, #0072ce 0%, #0056a3 100%);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.schedule-summary::marker {
+  display: none;
+}
+
+.schedule-summary::after {
+  content: '▼';
+  font-size: 16px;
+  transition: transform 0.3s ease;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.schedule-day[open] .schedule-summary::after {
+  transform: rotate(180deg);
+}
+
+.schedule-summary:hover {
+  background: linear-gradient(135deg, #0056a3 0%, #004080 100%);
+}
+
+.schedule-description {
+  padding: 20px 24px;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+}
+
+.schedule-description p {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+  text-align: justify;
+  hyphens: auto;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+/* Анімація для плавного розкриття */
+.schedule-day {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Мобільний дизайн (до 767px) */
+@media (max-width: 767px) {
+  .schedule-section {
+    padding: 40px 0;
+  }
+
+  .schedule-section .container {
+    padding: 0 16px;
+  }
+
+  .schedule-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .schedule-summary {
+    padding: 16px 18px;
+    font-size: 15px;
+  }
+
+  .schedule-description {
+    padding: 16px 18px;
+  }
+
+  .schedule-description p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+/* Планшет дизайн (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .schedule-section {
+    padding: 50px 0;
+  }
+
+  .schedule-section .container {
+    padding: 0 24px;
+  }
+
+  .schedule-title {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  .schedule-summary {
+    padding: 20px 22px;
+    font-size: 17px;
+  }
+
+  .schedule-description {
+    padding: 20px 22px;
+  }
+
+  .schedule-description p {
+    font-size: 15px;
+  }
+}
+
+/* Десктоп дизайн (1024px+) */
+@media (min-width: 1024px) {
+  .schedule-section {
+    padding: 60px 0;
+  }
+
+  .schedule-section .container {
+    padding: 0 40px;
+  }
+
+  .schedule-title {
+    font-size: 48px;
+    margin-bottom: 50px;
+  }
+
+  .schedule-summary {
+    padding: 18px 24px;
+    font-size: 18px;
+  }
+
+  .schedule-description {
+    padding: 20px 24px;
+  }
+
+  .schedule-description p {
+    font-size: 15px;
+  }
+}

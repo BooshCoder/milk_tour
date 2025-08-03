@@ -163,6 +163,35 @@
   padding-left: 10px;
 }
 
+.mobile-menu__footer {
+  padding: 20px;
+  border-top: 1px solid #eee;
+  margin-top: auto;
+}
+
+.mobile-phone-button {
+  display: block;
+  width: 100%;
+  background: linear-gradient(135deg, #0072ce 0%, #0056a3 100%);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 16px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 114, 206, 0.3);
+}
+
+.mobile-phone-button:hover {
+  background: linear-gradient(135deg, #0056a3 0%, #004080 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 114, 206, 0.4);
+}
+
 /* Hide desktop nav on mobile */
 @media screen and (max-width: 767px) {
   .desktop-nav {

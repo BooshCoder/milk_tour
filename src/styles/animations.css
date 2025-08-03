@@ -1,0 +1,36 @@
+/* Scroll Animations CSS - Тільки для hero та заголовків */
+
+/* Text Reveal - для заголовків */
+.text-reveal {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Fade In + Slide Up - для заголовків */
+.fade-slide-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Медіа-запити для мобільних пристроїв */
+@media (max-width: 767px) {
+  .text-reveal {
+    transform: translateX(-20px);
+  }
+
+  .fade-slide-up {
+    transform: translateY(30px);
+  }
+}
+
+/* Відключення анімацій для користувачів, які вважають за краще зменшену анімацію */
+@media (prefers-reduced-motion: reduce) {
+  .text-reveal,
+  .fade-slide-up {
+    transition: none;
+    transform: none;
+    opacity: 1;
+  }
+}

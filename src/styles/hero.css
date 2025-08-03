@@ -2,7 +2,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: 180px;
   text-align: center;
   color: #fff;
   height: 57.2vh;
@@ -169,7 +168,7 @@
   align-items: flex-start;
   text-align: left;
   max-width: 100%;
-  padding: 0;
+  padding-top: 100px;
   animation: textFadeIn 0.5s ease 0.3s both;
   opacity: 0;
   margin-bottom: 60px;

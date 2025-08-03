@@ -3,6 +3,14 @@ h2 {
   text-align: center;
 }
 
+/* Глобальні налаштування для тексту */
+p {
+  text-align: justify;
+  hyphens: auto;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
 .section {
   position: relative;
 }

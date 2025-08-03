@@ -3,7 +3,7 @@
 footer {
   background-color: #0072ce;
   color: #fff;
-  padding: 40px 0 40px;
+  padding: 100px 0 80px;
 }
 
 .footer-container {
@@ -13,18 +13,40 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Логотип */
 .footer-logo {
   text-align: center;
   order: 1;
+  position: relative;
+  margin-bottom: 40px;
 }
 
 .footer-logo svg {
   max-width: 200px;
   height: auto;
   fill: #fff; /* Робить SVG логотип білим */
+  position: relative;
+  z-index: 1;
+}
+
+/* Біле коло */
+.footer-circle {
+  width: 140px; /* Mobile */
+  height: 140px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0; /* Logo is z-index 1, so circle is behind */
+  opacity: 1 !important;
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Навігаційне меню */
@@ -87,15 +109,31 @@ footer {
     padding: 0 30px;
     flex-direction: column;
     gap: 30px;
+    justify-content: center;
+    align-items: center;
   }
 
   .footer-logo {
     order: 1;
     text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  .footer-circle {
+    width: 160px;
+    height: 160px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 1 !important;
   }
 
   .footer-logo svg {
     max-width: 180px;
+    position: relative;
+    z-index: 1;
   }
 
   .footer-menu {
@@ -126,11 +164,11 @@ footer {
 /* Desktop styles */
 @media screen and (min-width: 1200px) {
   footer {
-    padding: 60px 0 40px;
+    padding: 120px 0 120px;
   }
 
   .footer-container {
-    padding: 0 40px;
+    padding: 0 140px;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
@@ -140,11 +178,25 @@ footer {
   .footer-logo {
     order: 1;
     text-align: left;
-    flex: 1;
+    flex: 0 0 auto;
+    position: relative;
+    margin-bottom: 0;
+  }
+
+  .footer-circle {
+    width: 180px;
+    height: 180px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 1 !important;
   }
 
   .footer-logo svg {
-    max-width: 220px;
+    max-width: 110px; /* Зменшено з 220px на 50% */
+    position: relative;
+    z-index: 1;
   }
 
   .footer-menu {
@@ -152,6 +204,8 @@ footer {
     font-size: 12px;
     text-align: center;
     flex: 1;
+    display: flex;
+    justify-content: center;
   }
 
   .footer-menu ul {
@@ -167,7 +221,8 @@ footer {
   .footer-contacts {
     order: 3;
     text-align: right;
-    flex: 1;
+    flex: 0 0 auto;
+    margin-left: auto;
   }
 
   .footer-contacts p {

@@ -1,6 +1,6 @@
 /* Promo Section Styles */
 .section.promo {
-  padding: 40px 0;
+  padding: 40px 0 60px;
   background: #fff;
   position: relative;
 }
@@ -41,8 +41,11 @@
   color: #475569;
   margin-bottom: 16px;
   line-height: 1.6;
-  text-align: left;
+  text-align: justify;
   font-weight: 400;
+  hyphens: auto;
+  word-break: normal;
+  overflow-wrap: break-word;
 }
 
 .promo-text p:last-child {
@@ -120,7 +123,10 @@
 
   .promo-text p {
     font-size: 15px;
-    text-align: left;
+    text-align: justify;
+    hyphens: auto;
+    word-break: normal;
+    overflow-wrap: break-word;
   }
 
   .promo-image-desktop {
@@ -165,6 +171,10 @@
 
   .promo-text p {
     font-size: 15px;
+    text-align: justify;
+    hyphens: auto;
+    word-break: normal;
+    overflow-wrap: break-word;
   }
 
   .promo-image img {
@@ -201,6 +211,10 @@
 
   .promo-text p {
     font-size: 16px;
+    text-align: justify;
+    hyphens: auto;
+    word-break: normal;
+    overflow-wrap: break-word;
   }
 
   .promo-image img {
