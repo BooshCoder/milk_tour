@@ -14,6 +14,22 @@
   transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
+/* Fallback для випадків, коли JavaScript не працює */
+.no-js .text-reveal,
+.no-js .fade-slide-up {
+  opacity: 1;
+  transform: none;
+}
+
+/* Додатковий fallback для старих браузерів */
+@media (prefers-reduced-motion: no-preference) {
+  .text-reveal.animated,
+  .fade-slide-up.animated {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* Медіа-запити для мобільних пристроїв */
 @media (max-width: 767px) {
   .text-reveal {
