@@ -19,5 +19,8 @@
     "rollup": {
       "fsevents": "~2.3.3"
     }
+  },
+  "dependencies": {
+    "sharp": "^0.34.3"
   }
 }

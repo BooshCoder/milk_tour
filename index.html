@@ -3,8 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/styles/style.css" />
-    <title>Vite App</title>
+
+    <!-- Preload Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap"
+    />
+
+    <!-- Preload critical images -->
+    <link rel="preload" as="image" href="/public/images/hero/image1.jpg" />
+    <link rel="preload" as="image" href="/public/images/hero/image2.jpg" />
+    <link rel="preload" as="image" href="/public/images/hero/image3.jpg" />
+    <link rel="preload" as="image" href="/public/images/hero/image4.jpg" />
+
+    <!-- Preload CSS -->
+    <link
+      rel="preload"
+      href="/src/styles/style.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="/src/styles/style.css" /></noscript>
+    <title>Молочний агротур до США</title>
   </head>
   <body>
     {{> header }}
@@ -13,7 +40,7 @@
       {{> hero }} {{> about }} {{> geo }} {{> promo }} {{> farms }} {{> schedule
       }} {{> prices }} {{> footer }}
     </main>
-    <script type="module" src="/main.js"></script>
-    <script src="/src/js/schedule.js"></script>
+    <script type="module" src="/main.js" defer></script>
+    <script src="/src/js/schedule.js" defer></script>
   </body>
 </html>

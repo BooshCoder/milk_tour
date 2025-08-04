@@ -19,10 +19,10 @@ class HeroSlider {
     };
 
     this.backgroundImages = [
-      'url("/images/hero/image1.jpg")',
-      'url("/images/hero/image2.jpg")',
-      'url("/images/hero/image3.jpg")',
-      'url("/images/hero/image4.jpg")'
+      'url("/images/hero/image1.webp")',
+      'url("/images/hero/image2.webp")',
+      'url("/images/hero/image3.webp")',
+      'url("/images/hero/image4.webp")'
     ];
 
     this.setupEventListeners();
