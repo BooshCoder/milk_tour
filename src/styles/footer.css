@@ -174,7 +174,7 @@ footer {
 /* Desktop styles */
 @media screen and (min-width: 1200px) {
   footer {
-    padding: 120px 0 120px;
+    padding: 120px 0 20px;
   }
 
   .footer-container {
@@ -254,4 +254,59 @@ footer {
 
 .footer-logo svg:hover {
   opacity: 0.8;
+}
+
+/* Копірайт стилі */
+.footer-copyright {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyr {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+/* Мобільні стилі для копірайту */
+@media screen and (max-width: 767px) {
+  .footer-copyright {
+    padding: 15px 0;
+    margin-top: 30px;
+  }
+
+  .copyr {
+    font-size: 11px;
+  }
+}
+
+/* Планшетні стилі для копірайту */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-copyright {
+    padding: 18px 0;
+    margin-top: 35px;
+  }
+
+  .copyr {
+    font-size: 10px;
+  }
+}
+
+/* Десктопні стилі для копірайту */
+@media screen and (min-width: 1200px) {
+  .footer-copyright {
+    padding: 25px 0;
+    margin-top: 120px;
+  }
+
+  .copyr {
+    font-size: 13px;
+  }
 }

@@ -1,0 +1,20 @@
+Copyright © 2025 BooshCoder
+
+This website, including its source code, design, layout, and content,
+is the intellectual property of the author and is protected by copyright law.
+
+You may:
+– View and browse the deployed website
+– Use it for educational purposes (non-commercial) with attribution
+
+You may not:
+– Copy, reuse, redistribute or modify any part of the code or design
+– Deploy the code under your own name or brand
+– Sell or offer the code for commercial purposes
+
+Any unauthorized use of this code is strictly prohibited and may result in legal action.
+
+If you'd like to reuse or license this code, please contact the author.
+
+Author: BooshCoder
+Contact: bushmakin07@gmail.com
