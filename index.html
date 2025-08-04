@@ -18,12 +18,79 @@
     />
 
     <!-- Preload critical images -->
-    <link rel="preload" as="image" href="/public/images/hero/image1.jpg" />
-    <link rel="preload" as="image" href="/public/images/hero/image2.jpg" />
-    <link rel="preload" as="image" href="/public/images/hero/image3.jpg" />
-    <link rel="preload" as="image" href="/public/images/hero/image4.jpg" />
+    <link
+      rel="preload"
+      as="image"
+      href="/images/hero/image1.webp"
+      fetchpriority="high"
+      type="image/webp"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/images/hero/image2.webp"
+      fetchpriority="low"
+      type="image/webp"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/images/hero/image3.webp"
+      fetchpriority="low"
+      type="image/webp"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="/images/hero/image4.webp"
+      fetchpriority="low"
+      type="image/webp"
+    />
 
-    <!-- Preload CSS -->
+    <!-- Critical CSS inline -->
+    <style>
+      /* Критичні стилі для швидкого рендерингу */
+      body {
+        margin: 0;
+        font-family: 'Manrope', sans-serif;
+      }
+      .hero {
+        min-height: 100vh;
+        position: relative;
+      }
+      .farm-card-image {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .farm-card {
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+      .farm-grid {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr;
+      }
+      @media (min-width: 768px) {
+        .farm-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (min-width: 1200px) {
+        .farm-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    </style>
+
+    <!-- Non-critical CSS -->
     <link
       rel="preload"
       href="/src/styles/style.css"
