@@ -27,7 +27,7 @@ footer {
 }
 
 .footer-logo svg {
-  max-width: 200px;
+  max-width: 100px; /* Зменшено з 200px на 50% */
   height: auto;
   fill: #fff; /* Робить SVG логотип білим */
   position: relative;
@@ -131,7 +131,7 @@ footer {
   }
 
   .footer-logo svg {
-    max-width: 180px;
+    max-width: 90px; /* Зменшено з 180px на 50% */
     position: relative;
     z-index: 1;
   }
@@ -220,7 +220,7 @@ footer {
 
   .footer-contacts {
     order: 3;
-    text-align: right;
+    text-align: center;
     flex: 0 0 auto;
     margin-left: auto;
   }
