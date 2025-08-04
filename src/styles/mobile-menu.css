@@ -68,6 +68,16 @@
   flex-direction: row-reverse;
 }
 
+.mobile-menu__header .header__logo a {
+  display: block;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-menu__header .header__logo a:hover {
+  opacity: 0.8;
+}
+
 .mobile-menu-close {
   background: none;
   border: none;

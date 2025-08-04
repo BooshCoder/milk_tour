@@ -30,9 +30,12 @@
             увага приділяється селекції, що базується як на показниках
             продуктивності, так і на фенотипових якостях тварин
           </p>
-          <a href="#" class="farm-card-link"
-            >Дивитись фото <span class="farm-arrow">→</span></a
+          <button
+            class="farm-card-link farm-gallery-btn"
+            data-farm="luck-e-holstein"
           >
+            Дивитись фото <span class="farm-arrow">→</span>
+          </button>
         </div>
       </div>
 
@@ -64,9 +67,9 @@
             електроенергії, що дозволяє зменшити викиди та створити додаткове
             джерело доходу.
           </p>
-          <a href="#" class="farm-card-link"
-            >Дивитись фото <span class="farm-arrow">→</span></a
-          >
+          <button class="farm-card-link farm-gallery-btn" data-farm="homestead">
+            Дивитись фото <span class="farm-arrow">→</span>
+          </button>
         </div>
       </div>
 
@@ -101,9 +104,9 @@
             використовує дві доїльні установки: традиційну паралельну систему на
             20 місць та крос–вентильовану паралельну систему на 22 місця.
           </p>
-          <a href="#" class="farm-card-link"
-            >Дивитись фото <span class="farm-arrow">→</span></a
-          >
+          <button class="farm-card-link farm-gallery-btn" data-farm="larsons">
+            Дивитись фото <span class="farm-arrow">→</span>
+          </button>
         </div>
       </div>
 
@@ -138,9 +141,9 @@
             виробленого молока переробляється на фермі у відзначені нагородами
             сири, такі як свіжий моцарелла, маскарпоне та інші.
           </p>
-          <a href="#" class="farm-card-link"
-            >Дивитись фото <span class="farm-arrow">→</span></a
-          >
+          <button class="farm-card-link farm-gallery-btn" data-farm="crave">
+            Дивитись фото <span class="farm-arrow">→</span>
+          </button>
         </div>
       </div>
 
@@ -174,9 +177,12 @@
             утримання худоби. Ферма яку ми плануємо відвідати налічує близько
             7000 голів.
           </p>
-          <a href="#" class="farm-card-link"
-            >Дивитись фото <span class="farm-arrow">→</span></a
+          <button
+            class="farm-card-link farm-gallery-btn"
+            data-farm="milksource"
           >
+            Дивитись фото <span class="farm-arrow">→</span>
+          </button>
         </div>
       </div>
 
@@ -204,9 +210,9 @@
             застосовуються на практиці дослідження з управління стадом, годівлі
             тварин і покращення умов утримання.
           </p>
-          <a href="#" class="farm-card-link"
-            >Дивитись фото <span class="farm-arrow">→</span></a
-          >
+          <button class="farm-card-link farm-gallery-btn" data-farm="univer">
+            Дивитись фото <span class="farm-arrow">→</span>
+          </button>
         </div>
       </div>
 
@@ -240,9 +246,9 @@
             зменшуючи викиди вуглецю та енергоспоживання, покращуючи здоров'я
             ґрунту та зберігаючи якість води.
           </p>
-          <a href="#" class="farm-card-link"
-            >Дивитись фото <span class="farm-arrow">→</span></a
-          >
+          <button class="farm-card-link farm-gallery-btn" data-farm="miltrim">
+            Дивитись фото <span class="farm-arrow">→</span>
+          </button>
         </div>
       </div>
 
@@ -275,9 +281,9 @@
             300 млн фунтів сиру. Виробництво сертифіковане за стандартами HACCP,
             Kosher, Halal і відповідає принципам сталого розвитку.
           </p>
-          <a href="#" class="farm-card-link"
-            >Дивитись фото <span class="farm-arrow">→</span></a
-          >
+          <button class="farm-card-link farm-gallery-btn" data-farm="zavod">
+            Дивитись фото <span class="farm-arrow">→</span>
+          </button>
         </div>
       </div>
 
@@ -307,11 +313,83 @@
             раціонів для великої рогатої худоби, враховуючи індивідуальні
             потреби кожного господарства.
           </p>
-          <a href="#" class="farm-card-link"
-            >Дивитись фото <span class="farm-arrow">→</span></a
-          >
+          <button class="farm-card-link farm-gallery-btn" data-farm="northside">
+            Дивитись фото <span class="farm-arrow">→</span>
+          </button>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Modal Gallery -->
+<div id="farm-gallery-modal" class="farm-gallery-modal">
+  <div class="farm-gallery-overlay"></div>
+  <div class="farm-gallery-container">
+    <button class="farm-gallery-close" aria-label="Закрити галерею">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+
+    <div class="farm-gallery-header">
+      <div class="farm-gallery-header-left">
+        <h3 class="farm-gallery-title"></h3>
+        <div class="farm-gallery-counter">
+          <span class="current-slide">1</span> /
+          <span class="total-slides">1</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="farm-gallery-slider">
+      <button
+        class="farm-gallery-nav farm-gallery-prev"
+        aria-label="Попереднє фото"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <polyline points="15,18 9,12 15,6"></polyline>
+        </svg>
+      </button>
+
+      <div class="farm-gallery-main">
+        <img class="farm-gallery-image" src="" alt="" />
+      </div>
+
+      <button
+        class="farm-gallery-nav farm-gallery-next"
+        aria-label="Наступне фото"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <polyline points="9,18 15,12 9,6"></polyline>
+        </svg>
+      </button>
+    </div>
+
+    <div class="farm-gallery-thumbnails">
+      <!-- Thumbnails will be generated by JavaScript -->
+    </div>
+  </div>
+</div>

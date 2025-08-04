@@ -183,6 +183,11 @@
     margin-bottom: 40px;
   }
 
+  .price-strong {
+    display: block;
+    margin-top: 8px;
+  }
+
   .price-content {
     grid-template-columns: 1fr;
     gap: 30px;

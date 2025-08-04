@@ -45,6 +45,16 @@
   order: 1; /* Лого першим */
 }
 
+.header__logo a {
+  display: block;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.header__logo a:hover {
+  opacity: 0.8;
+}
+
 .header__nav {
   order: 2; /* Навігація другою */
 }
